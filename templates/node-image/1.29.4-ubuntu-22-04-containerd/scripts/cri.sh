@@ -50,8 +50,6 @@ EOF
 # Apply sysctl params without reboot
 sysctl --system
 
-CONTAINERD=1.7.16 # https://github.com/containerd/containerd/releases
-
 # Install containerd
 wget https://github.com/containerd/containerd/releases/download/v${CONTAINERD}/cri-containerd-cni-${CONTAINERD}-linux-${PACKER_ARCH}.tar.gz
 wget https://github.com/containerd/containerd/releases/download/v${CONTAINERD}/cri-containerd-cni-${CONTAINERD}-linux-${PACKER_ARCH}.tar.gz.sha256sum

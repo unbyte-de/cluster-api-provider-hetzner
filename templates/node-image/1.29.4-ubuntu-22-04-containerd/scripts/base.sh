@@ -31,7 +31,7 @@ apt-get -y install \
     at jq unzip wget socat mtr logrotate apt-transport-https
 
 # Install yq
-YQ_VERSION=v4.20.1 #https://github.com/mikefarah/yq
+YQ_VERSION=v4.44.5 #https://github.com/mikefarah/yq
 YQ_BINARY=yq_linux_${PACKER_ARCH}
 wget https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/${YQ_BINARY} -O /usr/bin/yq &&\
     chmod +x /usr/bin/yq
