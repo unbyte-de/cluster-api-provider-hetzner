@@ -115,6 +115,15 @@ server = "https://registry.k8s.io"
   override_path = true
 EOL
 
+mkdir -p /etc/containerd/certs.d/registry.gitlab.com
+cat >/etc/containerd/certs.d/registry.gitlab.com/hosts.toml <<EOL
+server = "https://registry.gitlab.com"
+
+[host."http://harbor.devops1.pbm.sh/v2/proxy-registry.gitlab.com"]
+  capabilities = ["pull", "resolve"]
+  override_path = true
+EOL
+
 # enable systemd service after next boot
 systemctl daemon-reload
 systemctl enable containerd
